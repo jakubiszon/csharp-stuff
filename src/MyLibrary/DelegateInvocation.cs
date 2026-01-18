@@ -14,7 +14,7 @@ public class DelegateInvocation
 		Delegate @delegate,
 		params object?[] arguments)
 	{
-		Delegate = @delegate;
+		Delegate = @delegate ?? throw new System.ArgumentNullException(nameof(@delegate));
 		Arguments = arguments;
 	}
 
